@@ -320,7 +320,7 @@ class Dataset(object):
     files = self._get_all_files()
 
     dataset = (
-        tf.data.TFRecordDataset(files, num_parallel_reads=self.num_readers)
+        tf.data.TFRecordDataset(files)
         .map(self._parse_function, num_parallel_calls=self.num_readers)
         .map(self._preprocess_image, num_parallel_calls=self.num_readers))
 

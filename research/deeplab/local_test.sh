@@ -30,7 +30,7 @@ set -e
 cd ..
 
 # Update PYTHONPATH.
-export PYTHONPATH=$PYTHONPATH:`pwd`:`pwd`/slim
+export PYTHONPATH=$PYTHONPATH:`pwd`:`pwd`/slim:`pwd`/deeplab/datasets/cityscapes
 
 # Set up the working environment.
 CURRENT_DIR=$(pwd)
